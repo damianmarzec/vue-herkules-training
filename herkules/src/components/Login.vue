@@ -1,8 +1,8 @@
 <template>
   <div class="Login">
-    <input type="text" placeholder="Login"/>
-    <input type="password" placeholder="Password">
-    <button>Log in</button>
+    <input type="text" placeholder="Login"/> </br>
+    <input type="password" placeholder="Password"> </br> </br>
+    <button>Log in!</button>
   </div>
 </template>
 
@@ -17,6 +17,11 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.Login{
+  margin-top:160px;
+  margin-right: 200px;
+  
+}
 h3 {
   margin: 40px 0 0;
 }
