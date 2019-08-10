@@ -1,0 +1,73 @@
+<template>
+  <div class="AddTask">
+        <input type ="text"
+         class="todo-input" 
+         placeholder="What needs to be done?"
+         v-model="newTodo"
+         @keyup.enter="addTodo"> <br>
+    <div v-for="todo in todos" :key="todo.id" class="todo-item">
+        {{todo.title}}
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: "AddTask",
+  data () {
+      return {
+          newTodo: '',
+          idForTodo: 3,
+          todos: [
+              {
+                  'id': 1,
+                  'title': 'first task',
+                  'completed': false,
+              },
+              {
+                  'id': 2,
+                  'title': 'second task',
+                  'completed': false,
+              },
+
+          ]
+      }
+  },
+  methods: {
+      addTodo() {
+       this.todos.push({
+           id: this.idForTodo,
+           title: this.newTodo,
+           completed: false,
+       }) 
+       this.newTodo = ''
+       this.idForTodo++
+      }
+  }
+};
+
+
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+.AddTask{
+  margin-top:160px;
+  margin-right: 200px;
+  
+}
+h3 {
+  margin: 40px 0 0;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+li {
+  display: inline-block;
+  margin: 0 10px;
+}
+a {
+  color: #42b983;
+}
+</style>

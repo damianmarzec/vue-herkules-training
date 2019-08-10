@@ -4,6 +4,8 @@
         
         <router-link :to="{ name: 'Login'}">Login</router-link>
         <router-link :to="{ name: 'SignUp'}">Get Started!</router-link>
+        <router-link :to="{ name: 'ToDo'}">ToDo</router-link>
+         <router-link :to="{ name: 'AddTask'}">ToDo List</router-link>
 
           <div class="logo">
               To-Do

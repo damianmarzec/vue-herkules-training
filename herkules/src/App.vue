@@ -10,12 +10,16 @@
 import HelloWorld from "./components/HelloWorld.vue";
 import Login from "./components/Login.vue";
 import SignIn from "./components/SignUp.vue";
+import AddTask from "./components/AddTask"
+
 
 export default {
   name: "app",
   components: {
     HelloWorld,
-    Login
+    Login,
+    AddTask
+    
   }
 };
 </script>
