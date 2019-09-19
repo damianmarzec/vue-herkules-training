@@ -1,60 +1,55 @@
 <template>
   <div class="AddTask">
-        <input type ="text"
-         class="todo-input" 
-         placeholder="What needs to be done?"
-         v-model="newTodo"
-         @keyup.enter="addTodo"> <br>
+    <input
+      type="text"
+      class="todo-input"
+      placeholder="What needs to be done?"
+      v-model="newTodo"
+      @keyup.enter="addTodo"
+    />
+    <br />
     <div v-for="todo in todos" :key="todo.id" class="todo-item">
-        {{todo.title}}
-    </div>
+      {{todo.title}}  <button v-on:click="removeTask(todo.id)">Delete</button>
+      </div>
   </div>
 </template>
 
 <script>
 export default {
   name: "AddTask",
-  data () {
-      return {
-          newTodo: '',
-          idForTodo: 3,
-          todos: [
-              {
-                  'id': 1,
-                  'title': 'first task',
-                  'completed': false,
-              },
-              {
-                  'id': 2,
-                  'title': 'second task',
-                  'completed': false,
-              },
-
-          ]
-      }
+  data() {
+    return {
+      newTodo: "",
+      todos: []
+    };
   },
   methods: {
-      addTodo() {
-       this.todos.push({
-           id: this.idForTodo,
-           title: this.newTodo,
-           completed: false,
-       }) 
-       this.newTodo = ''
-       this.idForTodo++
+    addTodo() {
+      this.todos.push({
+        id: this.todos.length + 1,
+        title: this.newTodo,
+        completed: false
+      });
+      this.newTodo = "";
+    },
+    removeTask(taskId) {
+      for (let index = 0; index < this.todos.length; index++) {
+        if (this.todos[index].id === taskId) {
+          this.todos.splice(index,1)
+        }
+        
       }
+
+    }
   }
 };
-
-
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.AddTask{
-  margin-top:160px;
+.AddTask {
+  margin-top: 160px;
   margin-right: 200px;
-  
 }
 h3 {
   margin: 40px 0 0;
