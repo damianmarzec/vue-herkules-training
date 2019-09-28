@@ -1,8 +1,8 @@
 <template>
   <div class="SignUp">
-    <input type="text" placeholder="Your name"/> </br>
-    <input type="password" placeholder="Password"> </br>
-    <input type="email" placeholder="E-mail"> </br> </br>
+    <input type="text" placeholder="Your name"/> <br>
+    <input type="password" placeholder="Password"> <br>
+    <input type="email" placeholder="E-mail"> <br> <br>
     <button>Join Us!</button>
   </div>
 </template>

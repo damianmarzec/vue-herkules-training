@@ -1,7 +1,7 @@
 <template>
   <div class="Login">
-    <input type="text" placeholder="Login"/> </br>
-    <input type="password" placeholder="Password"> </br> </br>
+    <input type="text" placeholder="Login"/> <br>
+    <input type="password" placeholder="Password"> <br> <br>
     <button>Log in!</button>
   </div>
 </template>

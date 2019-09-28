@@ -3,7 +3,9 @@ import Router from 'vue-router'
 import HelloWorld from "../components/HelloWorld"
 import Login from "../components/Login"
 import Layout from "../components/Layout"
-import SignUp from "../components/SignUp.vue";
+import SignUp from "../components/SignUp.vue"
+import ToDo from "../components/todo/ToDo.vue"
+import AddTask from "../components/AddTask.vue"
 
 Vue.use(Router);
 
@@ -39,6 +41,17 @@ export default new Router({
             name: 'SignUp',
             component: SignUp
           },
+          {
+            path: '/todo',
+            name: 'ToDo',
+            component: ToDo
+          },
+          {
+            path: '/addtask',
+            name: 'AddTask',
+            component: AddTask
+          },
+          
       ]
     }
   ]
